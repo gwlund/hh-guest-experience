@@ -104,14 +104,14 @@ function onLoad() {
   //alert("Running onLoad");
 
   $("#example-table").tabulator({
-      height:205, // set height of table, this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
+      height:305, // set height of table, this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
       layout:"fitColumns", //fit columns to width of table (optional)
       history:true,
       pagination:"local",
       paginationSize:7,
       movableColumns:true,
       columns:[ //Define Table Columns
-          {title:"Name", field:"name", width:250, editor:"input"},
+          {title:"Name", field:"name", width:250, editor:"input", headerFilter:"input", headerFilterPlaceholder:"Filter Name..."},
           {title:"Description", field:"description", align:"left", formatter:"textarea", width:400, editor:"input"},
           {title:"Type", field:"type", width:200, editor:typeEditor},
           {
@@ -144,6 +144,12 @@ function onLoad() {
 
   //Relies on the app.use(express.static('data')) which contains all the json files
   $("#example-table").tabulator("setData", "ExperienceData.json");
+
+  //Add row on "Add Row" button click
+  $("#add-row").click(function(){
+      $("#example-table").tabulator("addRow", {});
+  });
+
 }
 
 </script>
@@ -151,11 +157,10 @@ function onLoad() {
 <body onload=onLoad()>
 
 <div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
+  <h1>HH Guest Experience Prototype</h1>
   <p>Resize this responsive page to see the effect!</p> 
 </div>
 
-<h3>Table goes after here...</h3>
 <div class="table-controls-legend">Filter Parameters</div>
 <div class="table-controls">
   <span>
@@ -182,6 +187,7 @@ function onLoad() {
     <label>Value: </label>
     <input id="filter-value" type="text" placeholder="value to filter">
   </span>
+  <button id="add-row">Add Record</button>
   <button id="filter-clear">Clear Filter</button>
 </div>
 
