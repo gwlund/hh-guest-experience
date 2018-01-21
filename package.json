@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "jquery.tabulator": "^3.3.3",
+    "sheetjs": "^1.0.21",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {

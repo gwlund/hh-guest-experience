@@ -150,6 +150,16 @@ function onLoad() {
       $("#example-table").tabulator("addRow", {});
   });
 
+  //trigger download of data.json file
+  $("#download-json").click(function(){
+      $("#example-table").tabulator("download", "json", "data.json");
+  });
+
+  //trigger download of data.xlsx file.  Requires the SheetJs library (http://sheetjs.com/)
+  $("#download-xlsx").click(function(){
+      $("#example-table").tabulator("download", "xlsx", "data.xlsx");
+  });
+
 }
 
 </script>
@@ -189,6 +199,9 @@ function onLoad() {
   </span>
   <button id="add-row">Add Record</button>
   <button id="filter-clear">Clear Filter</button>
+  <button id="download-json">Download JSON</button>
+  <!-- Requires SheetJs library -->
+  <!-- <button id="download-xlsx">Download Excel</button> -->
 </div>
 
 <div id="example-table"></div>
