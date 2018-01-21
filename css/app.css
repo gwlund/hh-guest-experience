@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.table-controls-legend {
+    margin: 10px 0 5px 0;
+    color: #3FB449;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .table-controls {
+    margin-bottom: 10px;
+    padding: 10px 5px 0 5px;
+    background: #eee;
+    font-size: 14px;
+  }
+  
+  .table-controls input,
+  .table-controls select,
+  .table-controls button,
+  .table-controls > span {
+    margin: 0 5px 10px 5px;
+  }
+  
+  .table-controls input,
+  .table-controls select {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 4px 10px;
+    border: 2px solid #3FB449;
+    background: #fafafa;
+    outline: none;
+  }
