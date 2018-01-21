@@ -1,0 +1,50 @@
+[
+  {
+    "experienceId": 1,
+    "name": "Establishment Name",
+    "description": "Short description",
+    "type": "Restaurant|Park|Musuem|Bar|Pub|",
+    "rank": "1-Number which allows the best to be sorted first or show top N",
+    "region": "Downtown|N. Bellingham|Fairhaven|Barkley",
+    "tags": [ "food", "seafood" ],
+    "website": "http://official-website",
+    "image_url": "local path to image",
+    "address": {
+      "address1": "1145 N. State Street",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "98229",
+      "phone": "360-746-6130",
+      "map_url": "google map link"
+    },
+    "hours": "Hours of operation",
+    "reviewLinks": {
+      "url1": "OpenTable link",
+      "url2": "TripAdvisor link"
+    }
+  },
+  {
+    "experienceId": 2,
+    "name": "Rock and Rye Oyster House",
+    "description": "The menu consistently reflects the passion of the chefs, creating new and interesting food while channeling inspiration from classics and modern cuisine, such as in-house cured meats. ",
+    "type": "Restaurant",
+    "rank": 1,
+    "region": "Downtown",
+    "tags": [ "food", "seafood" ],
+    "website": "http://www.rockrye.com/",
+    "image_url": "TBD",
+    "address": {
+      "address1": "1145 N. State Street",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "98229",
+      "phone": "360-746-6130",
+      "map_url": "TBD"
+    },
+    "hours": "Tuesday-Sunday 3PM-10PM",
+    "reviewLinks": {
+      "url1": "TBD",
+      "url2": "TBD"
+    }
+  }
+]
