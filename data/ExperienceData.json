@@ -3,7 +3,7 @@
     "experienceId": 1,
     "name": "Establishment Name",
     "description": "Short description",
-    "type": "Restaurant|Park|Musuem|Bar|Pub|",
+    "type": "Restaurant|Park|Museum|Bar|Pub|",
     "rank": 3,
     "region": "Downtown|N. Bellingham|Fairhaven|Barkley",
     "tags": [ "food", "seafood" ],

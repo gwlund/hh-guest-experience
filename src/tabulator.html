@@ -62,7 +62,42 @@ var typeEditor = function(cell, onRendered, success, cancel){
     return editor;
 };
 
+//Custom filter example (http://tabulator.info/examples/3.3)
+function customFilter(data){
+    return data.rank && data.experiencId < 3;
+}
+
+//Trigger setFilter function with correct parameters
+function updateFilter(){
+
+    var filter = $("#filter-field").val() == "function" ? customFilter : $("#filter-field").val();
+
+    if($("#filter-field").val() == "function" ){
+        $("#filter-type").prop("disabled", true);
+        $("#filter-value").prop("disabled", true);
+    }else{
+        $("#filter-type").prop("disabled", false);
+        $("#filter-value").prop("disabled", false);
+    }
+
+    $("#example-table").tabulator("setFilter", filter, $("#filter-type").val(), $("#filter-value").val());
+}
+
+
 function onLoad() {
+
+  //Update filters on value change
+  $("#filter-field, #filter-type").change(updateFilter);
+  $("#filter-value").keyup(updateFilter);
+
+  //Clear filters on "Clear Filters" button click
+  $("#filter-clear").click(function(){
+      $("#filter-field").val("");
+      $("#filter-type").val("=");
+      $("#filter-value").val("");
+
+      $("#example-table").tabulator("clearFilter");
+  });
 
   //create Tabulator on DOM element with id "example-table"
   //alert("Running onLoad");
@@ -119,7 +154,35 @@ function onLoad() {
   <p>Resize this responsive page to see the effect!</p> 
 </div>
 
-<h1>Table goes after here...</h1>
+<h3>Table goes after here...</h3>
+<div class="table-controls-legend">Filter Parameters</div>
+<div class="table-controls">
+  <span>
+    <label>Field: </label>
+    <select id="filter-field">
+      <option></option>
+      <option value="type">Type</option>
+      <option value="rank">Rank</option> 
+    </select>
+  </span>
+  <span>
+    <label>Type: </label>
+    <select id="filter-type">
+        <option value="=">=</option>
+        <option value="<">&lt;</option>
+        <option value="<=">&lt;=</option>
+        <option value=">">&gt;</option>
+        <option value=">=">&gt;=</option>
+        <option value="!=">!=</option>
+        <option value="like">like</option>
+    </select>
+  </span>
+  <span>
+    <label>Value: </label>
+    <input id="filter-value" type="text" placeholder="value to filter">
+  </span>
+  <button id="filter-clear">Clear Filter</button>
+</div>
 
 <div id="example-table"></div>
 
