@@ -3,10 +3,10 @@
     "experienceId": 1,
     "name": "Establishment Name",
     "description": "Short description",
-    "type": "Restaurant|Park|Museum|Bar|Pub|",
+    "type": "Dining|Outdoors|Cultural|Nightlife",
     "rank": 3,
-    "region": "Downtown|N. Bellingham|Fairhaven|Barkley",
-    "tags": [ "food", "seafood" ],
+    "region": "Downtown|North Bellingham|Fairhaven|Barkley|Ferndale|Skagit|Whatcom",
+    "tags": [ "food", "seafood", "skiing", "snowboarding", "hiking", "parks"],
     "website": "http://official-website",
     "image_url": "local path to image",
     "address": {
@@ -17,17 +17,17 @@
       "phone": "Phone",
       "map_url": "google map link"
     },
-    "hours": "Hours of operation",
-    "reviewLinks": {
+    "externalLinks": {
       "url1": "OpenTable link",
-      "url2": "TripAdvisor link"
+      "url2": "TripAdvisor link",
+      "url3": "Trail map link"
     }
   },
   {
     "experienceId": 2,
     "name": "Rock and Rye Oyster House",
     "description": "The menu consistently reflects the passion of the chefs, creating new and interesting food while channeling inspiration from classics and modern cuisine, such as in-house cured meats. ",
-    "type": "Restaurant",
+    "type": "Dining",
     "rank": 1,
     "region": "Downtown",
     "tags": [ "food", "seafood" ],
@@ -38,12 +38,76 @@
       "city": "Bellingham",
       "state": "WA",
       "zip": "98229",
-      "phone": "360-746-6130",
       "map_url": "TBD"
     },
-    "hours": "Tuesday-Sunday 3PM-10PM",
-    "reviewLinks": {
-      "url1": "TBD",
+    "externalLinks": {
+      "url1": "https://www.yelp.com/biz/rock-and-rye-oyster-house-bellingham",
+      "url2": "TBD"
+    }
+  },
+  {
+    "experienceId": 3,
+    "name": "Mount Baker Theatre",
+    "description": "The Mount Baker Theatre in downtown Bellingham’s Arts District is the largest performing arts facility of its kind north of Seattle. A beautifully restored 1927 architectural treasure, listed on the register of National Historic Places, the theatre is dedicated to showcasing some of the best live performing artists on both the professional and community levels for audiences in the North Puget Sound area and the Lower Mainland of British Columbia.",
+    "type": "Cultural",
+    "rank": 1,
+    "region": "Downtown",
+    "tags": [ "shows", "live music", "performances" ],
+    "website": "http://www.mountbakertheatre.com/",
+    "image_url": "TBD",
+    "address": {
+      "address1": "104 North Commercial Street",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "98225",
+      "map_url": "https://goo.gl/maps/TXZP2vGttMG2"
+    },
+    "externalLinks": {
+      "url1": "https://www.tripadvisor.com/Attraction_Review-g58350-d666006-Reviews-Mount_Baker_Theatre-Bellingham_Washington.html",
+      "url2": "TBD"
+    }
+  },
+  {
+    "experienceId": 4,
+    "name": "Mount Baker Ski Area",
+    "description": "  ",
+    "type": "Outdoors",
+    "rank": 1,
+    "region": "Whatcom",
+    "tags": [ "snowboarding", "skiing", "back country" ],
+    "website": "http://www.mtbaker.us/",
+    "image_url": "TBD",
+    "address": {
+      "address1": "Mt Baker Hwy",
+      "city": "Deming",
+      "state": "WA",
+      "zip": "98244",
+      "map_url": "https://goo.gl/maps/8gVNrvm5Nw92"
+    },
+    "externalLinks": {
+      "url1": "https://www.tripadvisor.com/Attraction_Review-g58489-d146301-Reviews-Mt_Baker_Ski_Area-Glacier_Washington.html",
+      "url2": "TBD"
+    }
+  },
+  {
+    "experienceId": 5,
+    "name": "Melvin Brewing",
+    "description": "  ",
+    "type": "Nightlife",
+    "rank": 1,
+    "region": "Downtown",
+    "tags": [ "brew pub", "food", "beer" ],
+    "website": "melvinbrewing.com",
+    "image_url": "TBD",
+    "address": {
+      "address1": "2416 Meridian Street",
+      "city": "Bellingham",
+      "state": "WA",
+      "zip": "98225",
+      "map_url": "https://goo.gl/maps/GcZ1H82Frzr"
+    },
+    "externalLinks": {
+      "url1": "https://www.yelp.com/biz/melvin-brewing-bellingham",
       "url2": "TBD"
     }
   }
